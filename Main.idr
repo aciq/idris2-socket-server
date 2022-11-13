@@ -1,93 +1,75 @@
 module Main
 
-
-import Network
-import Data.List
-import Data.String
-import System
-import System.File
+import Data.Maybe
+import Data.Either
 import Network.Socket
-import Network.Socket.Data
 
-infixl 5 |>
-(|>) : a -> (a -> b) -> b
-a |> f = f a
+mapRightIO : (Either a b) -> (b -> IO ()) -> IO ()
+mapRightIO x f = do
+    case x of
+        Left a => pure()
+        Right b => f b
+        
+data SocketState = Bind | Listen | Accept | Recv | Send
 
-mapRight : (b -> c) -> (Either SocketError b) -> (Either SocketError c)
-mapRight fn res = case res of
-    Left err => Left err
-    Right item => Right (fn item)
+record ServerState where
+  constructor MkServerState
+  port : Port
+  sock : Socket
+  client : Maybe Socket
 
-data ServerState = Begin | Accept | Recv | End
+update : SocketState -> ServerState -> IO ()
 
+update Bind srv = do
+    res <- bind srv.sock (Just (Hostname "0.0.0.0")) srv.port
+    if res /= 0
+        then putStrLn ("Failed to bind socket with error: " ++ show res)
+        else do update Listen srv
 
-resolveSocket : ServerState -> Socket -> IO (ServerState,Socket)
-resolveSocket Begin serverSock = do
-    osock <- accept serverSock
-    case osock of 
-        Left err => pure (End, serverSock)
-        Right (clientSock,addr) => do
-            putStrLn ("accepted")
-            resolveSocket Accept (clientSock)
-resolveSocket Accept clientSock = do
-    res <- recv clientSock 500
-    case res of 
-        Left err => pure (End, clientSock)
-        Right (msgstr,resultcode) => do
-            putStrLn ("request: " ++ msgstr)
-            resolveSocket Recv clientSock
-resolveSocket Recv sock = do
-    res <- send sock "HTTP/1.1 200 OK\r\nContent: text/plain\r\n\r\nbody"
-    case res of 
-        Left err => pure (End, sock)
-        Right (resultcode) => do
-            putStrLn ("sent result:" ++ show resultcode)
-            resolveSocket End sock
-resolveSocket End sock = do
-    -- close sock
-    pure (Begin, sock)
+update (Listen) srv = do
+    res <- listen srv.sock
+    if res /= 0
+        then putStrLn ("Failed to listen on socket with error: " ++ show res)
+        else do 
+            putStrLn ("server running on: " ++ (show srv.port))
+            update Accept srv
+            putStrLn ("killing process ")
 
-serverLoop : ServerState -> (Either SocketError Socket) -> IO()
-serverLoop state osock = do
-    
-    putStrLn "waiting for request"
-    case osock of 
-        Left error => putStrLn "error!!"
-        Right sock => do
-            (endstate, clientSock) <- resolveSocket state sock
-            close clientSock
-            close sock
+update Accept srv = do
+    res <- accept srv.sock
+    mapRightIO res (\(soc,addr) => do
+        update Recv (MkServerState srv.port srv.sock (Just soc)))
 
-                
-            
+update Recv srv = do
+    case srv.client of
+        Nothing => pure()
+        Just c => do
+    res <- recv c 500
+    mapRightIO res (\(msgstr,resultcode) => do 
+        putStrLn ("request: " ++ msgstr)
+        update Send srv)
+        
+update Send srv = do
+    case srv.client of
+        Nothing => pure()
+        Just c => do
+    res <- send c "HTTP/1.1 200 OK\r\nContent: text/plain\r\n\r\nbody"
+    mapRightIO res (\(resultcode) => do 
+        close c 
+        update Accept srv
+        )
 
 
 startServer : Int -> IO()
 startServer p = do
     osock <- socket AF_INET Stream 0
     case osock of 
-        Left sockError => putStrLn "failed"
+        Left sockError => pure()
         Right sock => do
-            res <- bind sock (Just (Hostname "0.0.0.0")) p
-            putStrLn "bound to 0.0.0.0"
-            if res /= 0
-                then putStrLn ("Failed to bind socket with error: " ++ show res)
-                else do
-                    res <- listen sock
-                    if res /= 0
-                        then putStrLn ("Failed to listen on socket with error: " ++ show res)
-                        else do
-                            putStrLn ("server running on: " ++ (show p))
-                            fflush stdout
-                            serverLoop Begin (Right sock)
-
-        
-                                
-    putStrLn "end"
+            
+    update Bind (MkServerState p sock Nothing)
 
 
 main : IO ()
 main = do
     startServer 5000
-
-
