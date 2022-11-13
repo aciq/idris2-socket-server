@@ -1,0 +1,1 @@
+(parameterize ([optimize-level 3] [compile-file-message #f]) (compile-program "/home/ian/f/publicrepos/idris2-socket-server/build/exec/main_app/main.ss"))
