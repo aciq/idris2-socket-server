@@ -2485,14 +2485,14 @@ Value *Main_case___quotationupdate_quotation_8698
 ,   Value * var_1
 )
 {
-    Value * tmp_45 = NULL;                                   // Main:20:12--20:24
-    AConAlt * constructorField_44= newConstructorField(2);   // Main:20:12--20:24
+    Value * tmp_45 = NULL;                                   // Main:19:12--19:24
+    AConAlt * constructorField_44= newConstructorField(2);   // Main:19:12--19:24
     constructorField_44[0].tag = 0;
     constructorField_44[0].name = NULL;
     constructorField_44[1].tag = 1;
     constructorField_44[1].name = NULL;
     switch(compareConstructors(var_1, constructorField_44, 2)){
-                                                             // Main:20:12--20:24
+                                                             // Main:19:12--19:24
       case 0:
       {
         Value_Arglist *arglist_46 = newArglist(1,1);
@@ -2509,25 +2509,25 @@ Value *Main_case___quotationupdate_quotation_8698
         Value *(*fPtr_49)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_49 = (Value*)makeClosureFromArglist(fPtr_49, arglist_48);
         // end   csegen_13()
-        Value * var_3 = trampoline(closure_49);              // Main:57:12--57:16
+        Value * var_3 = trampoline(closure_49);              // Main:56:12--56:16
         Value * var_4 = (Value*)makeString("HTTP/1.1 200 OK\x0d""\x0a""Content: text/plain\x0d""\x0a""\x0d""\x0a""body");
-                                                             // Main:57:12--57:16
-        // start Network_Socket_send(var_3, var_2, var_4)    // Main:57:12--57:16
+                                                             // Main:56:12--56:16
+        // start Network_Socket_send(var_3, var_2, var_4)    // Main:56:12--56:16
         Value_Arglist *arglist_50 = newArglist(0,3);
         arglist_50->args[0] =  newReference(var_3);
         arglist_50->args[1] =  newReference(var_2);
         arglist_50->args[2] =  newReference(var_4);
         Value *(*fPtr_51)(Value_Arglist*) = Network_Socket_send_arglist;
-                                                             // Main:57:12--57:16
+                                                             // Main:56:12--56:16
         Value *closure_51 = (Value*)makeClosureFromArglist(fPtr_51, arglist_50);
-                                                             // Main:57:12--57:16
-        // end   Network_Socket_send(var_3, var_2, var_4)    // Main:57:12--57:16
+                                                             // Main:56:12--56:16
+        // end   Network_Socket_send(var_3, var_2, var_4)    // Main:56:12--56:16
         Value * var_5 = trampoline(closure_51);              // Prelude.IO:31:13--31:20
         Value_Arglist *arglist_52 = newArglist(1,3);
         arglist_52->args[0] =  newReference(var_2);
         arglist_52->args[1] =  newReference(var_0);
         Value *(*closure_53)(Value_Arglist*) = Main_case_block_in_update__parenOpen8698_parenClose_3_arglist;
-                                                             // Main:57:5--57:8
+                                                             // Main:56:5--56:8
         Value * var_6 = (Value*)makeClosureFromArglist(closure_53, arglist_52);
                                                              // Prelude.IO:31:13--31:20
         // start PrimIO_io_bind(var_5, var_6)                // Prelude.IO:31:13--31:20
@@ -2577,16 +2577,16 @@ Value *Main_case_block_in_update__parenOpen8698_parenClose_3
     arglist_56->args[1] =  newReference(var_1);
     Value *(*closure_57)(Value_Arglist*) = Main_case_block_in_update__parenOpen8698_parenClose_2_arglist;
     Value * var_3 = (Value*)makeClosureFromArglist(closure_57, arglist_56);
-                                                             // Main:58:5--58:15
-    // start Main_mapRightIO(var_2, var_3)                   // Main:58:5--58:15
+                                                             // Main:57:5--57:15
+    // start Main_mapRightIO(var_2, var_3)                   // Main:57:5--57:15
     Value_Arglist *arglist_58 = newArglist(0,2);
     arglist_58->args[0] =  newReference(var_2);
     arglist_58->args[1] =  newReference(var_3);
     Value *(*fPtr_59)(Value_Arglist*) = Main_mapRightIO_arglist;
-                                                             // Main:58:5--58:15
+                                                             // Main:57:5--57:15
     Value *closure_59 = (Value*)makeClosureFromArglist(fPtr_59, arglist_58);
-                                                             // Main:58:5--58:15
-    // end   Main_mapRightIO(var_2, var_3)                   // Main:58:5--58:15
+                                                             // Main:57:5--57:15
+    // end   Main_mapRightIO(var_2, var_3)                   // Main:57:5--57:15
     Value *returnValue = closure_59;
     removeReference(var_3);
     return returnValue;
@@ -2618,39 +2618,39 @@ Value *Main_case_block_in_update__parenOpen8698_parenClose_2
     Value *(*fPtr_61)(Value_Arglist*) = csegen_12_arglist;
     Value *closure_61 = (Value*)makeClosureFromArglist(fPtr_61, arglist_60);
     // end   csegen_12()
-    Value * var_4 = trampoline(closure_61);                  // Main:59:9--59:16
+    Value * var_4 = trampoline(closure_61);                  // Main:58:9--58:16
     // start csegen_13()
     Value_Arglist *arglist_62 = newArglist(0,0);
     Value *(*fPtr_63)(Value_Arglist*) = csegen_13_arglist;
     Value *closure_63 = (Value*)makeClosureFromArglist(fPtr_63, arglist_62);
     // end   csegen_13()
-    Value * var_3 = trampoline(closure_63);                  // Main:59:9--59:14
-    // start Network_Socket_close(var_3, var_0)              // Main:59:9--59:14
+    Value * var_3 = trampoline(closure_63);                  // Main:58:9--58:14
+    // start Network_Socket_close(var_3, var_0)              // Main:58:9--58:14
     Value_Arglist *arglist_64 = newArglist(0,2);
     arglist_64->args[0] =  newReference(var_3);
     arglist_64->args[1] =  newReference(var_0);
     Value *(*fPtr_65)(Value_Arglist*) = Network_Socket_close_arglist;
-                                                             // Main:59:9--59:14
+                                                             // Main:58:9--58:14
     Value *closure_65 = (Value*)makeClosureFromArglist(fPtr_65, arglist_64);
-                                                             // Main:59:9--59:14
-    // end   Network_Socket_close(var_3, var_0)              // Main:59:9--59:14
-    Value * var_5 = trampoline(closure_65);                  // Main:59:9--59:16
+                                                             // Main:58:9--58:14
+    // end   Network_Socket_close(var_3, var_0)              // Main:58:9--58:14
+    Value * var_5 = trampoline(closure_65);                  // Main:58:9--58:16
     Value_Arglist *arglist_66 = newArglist(1,2);
     arglist_66->args[0] =  newReference(var_1);
     Value *(*closure_67)(Value_Arglist*) = Main_case_block_in_update__parenOpen8698_parenClose_1_arglist;
-                                                             // Main:60:9--60:26
+                                                             // Main:59:9--59:26
     Value * var_6 = (Value*)makeClosureFromArglist(closure_67, arglist_66);
-                                                             // Main:59:9--59:16
-    // start Prelude_Interfaces__gt_gt(var_4, var_5, var_6)  // Main:59:9--59:16
+                                                             // Main:58:9--58:16
+    // start Prelude_Interfaces__gt_gt(var_4, var_5, var_6)  // Main:58:9--58:16
     Value_Arglist *arglist_68 = newArglist(0,3);
     arglist_68->args[0] =  newReference(var_4);
     arglist_68->args[1] =  newReference(var_5);
     arglist_68->args[2] =  newReference(var_6);
     Value *(*fPtr_69)(Value_Arglist*) = Prelude_Interfaces__gt_gt_arglist;
-                                                             // Main:59:9--59:16
+                                                             // Main:58:9--58:16
     Value *closure_69 = (Value*)makeClosureFromArglist(fPtr_69, arglist_68);
-                                                             // Main:59:9--59:16
-    // end   Prelude_Interfaces__gt_gt(var_4, var_5, var_6)  // Main:59:9--59:16
+                                                             // Main:58:9--58:16
+    // end   Prelude_Interfaces__gt_gt(var_4, var_5, var_6)  // Main:58:9--58:16
     Value *returnValue = closure_69;
     removeReference(var_6);
     removeReference(var_5);
@@ -2679,15 +2679,15 @@ Value *Main_case_block_in_update__parenOpen8698_parenClose_1
 ,   Value * var_1
 )
 {
-    Value * var_2 = (Value*)makeBits8(UINT8_C(2));           // Main:60:9--60:15
-    // start Main_update(var_2, var_0)                       // Main:60:9--60:15
+    Value * var_2 = (Value*)makeBits8(UINT8_C(2));           // Main:59:9--59:15
+    // start Main_update(var_2, var_0)                       // Main:59:9--59:15
     Value_Arglist *arglist_70 = newArglist(0,2);
     arglist_70->args[0] =  newReference(var_2);
     arglist_70->args[1] =  newReference(var_0);
-    Value *(*fPtr_71)(Value_Arglist*) = Main_update_arglist; // Main:60:9--60:15
+    Value *(*fPtr_71)(Value_Arglist*) = Main_update_arglist; // Main:59:9--59:15
     Value *closure_71 = (Value*)makeClosureFromArglist(fPtr_71, arglist_70);
-                                                             // Main:60:9--60:15
-    // end   Main_update(var_2, var_0)                       // Main:60:9--60:15
+                                                             // Main:59:9--59:15
+    // end   Main_update(var_2, var_0)                       // Main:59:9--59:15
     Value *returnValue = closure_71;
     removeReference(var_2);
     return returnValue;
@@ -2733,14 +2733,14 @@ Value *Main_case___quotationupdate_quotation_8634
 ,   Value * var_1
 )
 {
-    Value * tmp_73 = NULL;                                   // Main:20:12--20:24
-    AConAlt * constructorField_72= newConstructorField(2);   // Main:20:12--20:24
+    Value * tmp_73 = NULL;                                   // Main:19:12--19:24
+    AConAlt * constructorField_72= newConstructorField(2);   // Main:19:12--19:24
     constructorField_72[0].tag = 0;
     constructorField_72[0].name = NULL;
     constructorField_72[1].tag = 1;
     constructorField_72[1].name = NULL;
     switch(compareConstructors(var_1, constructorField_72, 2)){
-                                                             // Main:20:12--20:24
+                                                             // Main:19:12--19:24
       case 0:
       {
         Value_Arglist *arglist_74 = newArglist(1,1);
@@ -2757,24 +2757,24 @@ Value *Main_case___quotationupdate_quotation_8634
         Value *(*fPtr_77)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_77 = (Value*)makeClosureFromArglist(fPtr_77, arglist_76);
         // end   csegen_13()
-        Value * var_4 = trampoline(closure_77);              // Main:48:12--48:16
+        Value * var_4 = trampoline(closure_77);              // Main:47:12--47:16
         Value * var_3 = (Value*)makeIntegerLiteral("500");
-        Value * var_5 = cast_Integer_to_Int64(var_3);        // Main:48:12--48:16
-        // start Network_Socket_recv(var_4, var_2, var_5)    // Main:48:12--48:16
+        Value * var_5 = cast_Integer_to_Int64(var_3);        // Main:47:12--47:16
+        // start Network_Socket_recv(var_4, var_2, var_5)    // Main:47:12--47:16
         Value_Arglist *arglist_78 = newArglist(0,3);
         arglist_78->args[0] =  newReference(var_4);
         arglist_78->args[1] =  newReference(var_2);
         arglist_78->args[2] =  newReference(var_5);
         Value *(*fPtr_79)(Value_Arglist*) = Network_Socket_recv_arglist;
-                                                             // Main:48:12--48:16
+                                                             // Main:47:12--47:16
         Value *closure_79 = (Value*)makeClosureFromArglist(fPtr_79, arglist_78);
-                                                             // Main:48:12--48:16
-        // end   Network_Socket_recv(var_4, var_2, var_5)    // Main:48:12--48:16
+                                                             // Main:47:12--47:16
+        // end   Network_Socket_recv(var_4, var_2, var_5)    // Main:47:12--47:16
         Value * var_6 = trampoline(closure_79);              // Prelude.IO:31:13--31:20
         Value_Arglist *arglist_80 = newArglist(1,2);
         arglist_80->args[0] =  newReference(var_0);
         Value *(*closure_81)(Value_Arglist*) = Main_case_block_in_update__parenOpen8634_parenClose_3_arglist;
-                                                             // Main:48:5--48:8
+                                                             // Main:47:5--47:8
         Value * var_7 = (Value*)makeClosureFromArglist(closure_81, arglist_80);
                                                              // Prelude.IO:31:13--31:20
         // start PrimIO_io_bind(var_6, var_7)                // Prelude.IO:31:13--31:20
@@ -2823,16 +2823,16 @@ Value *Main_case_block_in_update__parenOpen8634_parenClose_3
     arglist_84->args[0] =  newReference(var_0);
     Value *(*closure_85)(Value_Arglist*) = Main_case_block_in_update__parenOpen8634_parenClose_2_arglist;
     Value * var_2 = (Value*)makeClosureFromArglist(closure_85, arglist_84);
-                                                             // Main:49:5--49:15
-    // start Main_mapRightIO(var_1, var_2)                   // Main:49:5--49:15
+                                                             // Main:48:5--48:15
+    // start Main_mapRightIO(var_1, var_2)                   // Main:48:5--48:15
     Value_Arglist *arglist_86 = newArglist(0,2);
     arglist_86->args[0] =  newReference(var_1);
     arglist_86->args[1] =  newReference(var_2);
     Value *(*fPtr_87)(Value_Arglist*) = Main_mapRightIO_arglist;
-                                                             // Main:49:5--49:15
+                                                             // Main:48:5--48:15
     Value *closure_87 = (Value*)makeClosureFromArglist(fPtr_87, arglist_86);
-                                                             // Main:49:5--49:15
-    // end   Main_mapRightIO(var_1, var_2)                   // Main:49:5--49:15
+                                                             // Main:48:5--48:15
+    // end   Main_mapRightIO(var_1, var_2)                   // Main:48:5--48:15
     Value *returnValue = closure_87;
     removeReference(var_2);
     return returnValue;
@@ -2871,43 +2871,43 @@ Value *Main_case_block_in_update__parenOpen8634_parenClose_2
         Value *(*fPtr_91)(Value_Arglist*) = csegen_12_arglist;
         Value *closure_91 = (Value*)makeClosureFromArglist(fPtr_91, arglist_90);
         // end   csegen_12()
-        Value * var_7 = trampoline(closure_91);              // Main:50:9--50:41
+        Value * var_7 = trampoline(closure_91);              // Main:49:9--49:41
         // start csegen_13()
         Value_Arglist *arglist_92 = newArglist(0,0);
         Value *(*fPtr_93)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_93 = (Value*)makeClosureFromArglist(fPtr_93, arglist_92);
         // end   csegen_13()
-        Value * var_5 = trampoline(closure_93);              // Main:50:9--50:17
+        Value * var_5 = trampoline(closure_93);              // Main:49:9--49:17
         Value * var_4 = (Value*)makeString("request: ");
-        Value * var_6 = strAppend(var_4, var_2);             // Main:50:9--50:17
-        // start Prelude_IO_putStrLn(var_5, var_6)           // Main:50:9--50:17
+        Value * var_6 = strAppend(var_4, var_2);             // Main:49:9--49:17
+        // start Prelude_IO_putStrLn(var_5, var_6)           // Main:49:9--49:17
         Value_Arglist *arglist_94 = newArglist(0,2);
         arglist_94->args[0] =  newReference(var_5);
         arglist_94->args[1] =  newReference(var_6);
         Value *(*fPtr_95)(Value_Arglist*) = Prelude_IO_putStrLn_arglist;
-                                                             // Main:50:9--50:17
+                                                             // Main:49:9--49:17
         Value *closure_95 = (Value*)makeClosureFromArglist(fPtr_95, arglist_94);
-                                                             // Main:50:9--50:17
-        // end   Prelude_IO_putStrLn(var_5, var_6)           // Main:50:9--50:17
-        Value * var_8 = trampoline(closure_95);              // Main:50:9--50:41
+                                                             // Main:49:9--49:17
+        // end   Prelude_IO_putStrLn(var_5, var_6)           // Main:49:9--49:17
+        Value * var_8 = trampoline(closure_95);              // Main:49:9--49:41
         Value_Arglist *arglist_96 = newArglist(1,2);
         arglist_96->args[0] =  newReference(var_0);
         Value *(*closure_97)(Value_Arglist*) = Main_case_block_in_update__parenOpen8634_parenClose_1_arglist;
-                                                             // Main:51:9--51:24
+                                                             // Main:50:9--50:24
         Value * var_9 = (Value*)makeClosureFromArglist(closure_97, arglist_96);
-                                                             // Main:50:9--50:41
+                                                             // Main:49:9--49:41
         // start Prelude_Interfaces__gt_gt(var_7, var_8, var_9)
-                                                             // Main:50:9--50:41
+                                                             // Main:49:9--49:41
         Value_Arglist *arglist_98 = newArglist(0,3);
         arglist_98->args[0] =  newReference(var_7);
         arglist_98->args[1] =  newReference(var_8);
         arglist_98->args[2] =  newReference(var_9);
         Value *(*fPtr_99)(Value_Arglist*) = Prelude_Interfaces__gt_gt_arglist;
-                                                             // Main:50:9--50:41
+                                                             // Main:49:9--49:41
         Value *closure_99 = (Value*)makeClosureFromArglist(fPtr_99, arglist_98);
-                                                             // Main:50:9--50:41
+                                                             // Main:49:9--49:41
         // end   Prelude_Interfaces__gt_gt(var_7, var_8, var_9)
-                                                             // Main:50:9--50:41
+                                                             // Main:49:9--49:41
         tmp_89 = closure_99;
         removeReference(var_9);
         removeReference(var_8);
@@ -2942,16 +2942,16 @@ Value *Main_case_block_in_update__parenOpen8634_parenClose_1
 ,   Value * var_1
 )
 {
-    Value * var_2 = (Value*)makeBits8(UINT8_C(4));           // Main:51:9--51:15
-    // start Main_update(var_2, var_0)                       // Main:51:9--51:15
+    Value * var_2 = (Value*)makeBits8(UINT8_C(4));           // Main:50:9--50:15
+    // start Main_update(var_2, var_0)                       // Main:50:9--50:15
     Value_Arglist *arglist_100 = newArglist(0,2);
     arglist_100->args[0] =  newReference(var_2);
     arglist_100->args[1] =  newReference(var_0);
     Value *(*fPtr_101)(Value_Arglist*) = Main_update_arglist;
-                                                             // Main:51:9--51:15
+                                                             // Main:50:9--50:15
     Value *closure_101 = (Value*)makeClosureFromArglist(fPtr_101, arglist_100);
-                                                             // Main:51:9--51:15
-    // end   Main_update(var_2, var_0)                       // Main:51:9--51:15
+                                                             // Main:50:9--50:15
+    // end   Main_update(var_2, var_0)                       // Main:50:9--50:15
     Value *returnValue = closure_101;
     removeReference(var_2);
     return returnValue;
@@ -2997,8 +2997,8 @@ Value *Main_update
 ,   Value * var_1
 )
 {
-    Value * tmp_102 = NULL;                                  // Main:22:10--22:21
-    switch(extractInt(var_0)){                               // Main:22:10--22:21
+    Value * tmp_102 = NULL;                                  // Main:21:10--21:21
+    switch(extractInt(var_0)){                               // Main:21:10--21:21
       case 0 :
       {
         // start csegen_13()
@@ -3006,14 +3006,14 @@ Value *Main_update
         Value *(*fPtr_104)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_104 = (Value*)makeClosureFromArglist(fPtr_104, arglist_103);
         // end   csegen_13()
-        Value * var_10 = trampoline(closure_104);            // Main:25:12--25:16
-        Value * tmp_106 = NULL;                              // Main:16:1--20:24
+        Value * var_10 = trampoline(closure_104);            // Main:24:12--24:16
+        Value * tmp_106 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_105= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_105[0].tag = 0;
         constructorField_105[0].name = NULL;
         switch(compareConstructors(var_1, constructorField_105, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_2 = ((Value_Constructor*)var_1)->args[0];
@@ -3024,25 +3024,25 @@ Value *Main_update
           }
         }
         free(constructorField_105);
-        Value * var_11 = tmp_106;                            // Main:25:12--25:16
-        Value * var_5 = (Value*)makeString("0.0.0.0");       // Main:25:33--25:41
+        Value * var_11 = tmp_106;                            // Main:24:12--24:16
+        Value * var_5 = (Value*)makeString("0.0.0.0");       // Main:24:33--24:41
         Value_Constructor* constructor_107 = newConstructor(1, 2, "Network_Socket_Data_Hostname");
-                                                             // Main:25:33--25:41
-         // constructor Network_Socket_Data_Hostname         // Main:25:33--25:41
+                                                             // Main:24:33--24:41
+         // constructor Network_Socket_Data_Hostname         // Main:24:33--24:41
         constructor_107->args[0] = newReference(var_5);
-        Value * var_6 = (Value*)constructor_107;             // Main:25:27--25:31
+        Value * var_6 = (Value*)constructor_107;             // Main:24:27--24:31
         Value_Constructor* constructor_108 = newConstructor(1, 1, "Prelude_Types_Just");
-                                                             // Main:25:27--25:31
-         // constructor Prelude_Types_Just                   // Main:25:27--25:31
+                                                             // Main:24:27--24:31
+         // constructor Prelude_Types_Just                   // Main:24:27--24:31
         constructor_108->args[0] = newReference(var_6);
-        Value * var_12 = (Value*)constructor_108;            // Main:25:12--25:16
-        Value * tmp_110 = NULL;                              // Main:16:1--20:24
+        Value * var_12 = (Value*)constructor_108;            // Main:24:12--24:16
+        Value * tmp_110 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_109= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_109[0].tag = 0;
         constructorField_109[0].name = NULL;
         switch(compareConstructors(var_1, constructorField_109, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_7 = ((Value_Constructor*)var_1)->args[0];
@@ -3053,25 +3053,25 @@ Value *Main_update
           }
         }
         free(constructorField_109);
-        Value * var_13 = tmp_110;                            // Main:25:12--25:16
+        Value * var_13 = tmp_110;                            // Main:24:12--24:16
         // start Network_Socket_bind(var_10, var_11, var_12, var_13)
-                                                             // Main:25:12--25:16
+                                                             // Main:24:12--24:16
         Value_Arglist *arglist_111 = newArglist(0,4);
         arglist_111->args[0] =  newReference(var_10);
         arglist_111->args[1] =  newReference(var_11);
         arglist_111->args[2] =  newReference(var_12);
         arglist_111->args[3] =  newReference(var_13);
         Value *(*fPtr_112)(Value_Arglist*) = Network_Socket_bind_arglist;
-                                                             // Main:25:12--25:16
+                                                             // Main:24:12--24:16
         Value *closure_112 = (Value*)makeClosureFromArglist(fPtr_112, arglist_111);
-                                                             // Main:25:12--25:16
+                                                             // Main:24:12--24:16
         // end   Network_Socket_bind(var_10, var_11, var_12, var_13)
-                                                             // Main:25:12--25:16
+                                                             // Main:24:12--24:16
         Value * var_14 = trampoline(closure_112);            // Prelude.IO:31:13--31:20
         Value_Arglist *arglist_113 = newArglist(1,2);
         arglist_113->args[0] =  newReference(var_1);
         Value *(*closure_114)(Value_Arglist*) = Main_update_0_arglist;
-                                                             // Main:25:5--25:8
+                                                             // Main:24:5--24:8
         Value * var_15 = (Value*)makeClosureFromArglist(closure_114, arglist_113);
                                                              // Prelude.IO:31:13--31:20
         // start PrimIO_io_bind(var_14, var_15)              // Prelude.IO:31:13--31:20
@@ -3101,14 +3101,14 @@ Value *Main_update
         Value *(*fPtr_118)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_118 = (Value*)makeClosureFromArglist(fPtr_118, arglist_117);
         // end   csegen_13()
-        Value * var_19 = trampoline(closure_118);            // Main:31:12--31:18
-        Value * tmp_120 = NULL;                              // Main:16:1--20:24
+        Value * var_19 = trampoline(closure_118);            // Main:30:12--30:18
+        Value * tmp_120 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_119= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_119[0].tag = 0;
         constructorField_119[0].name = NULL;
         switch(compareConstructors(var_1, constructorField_119, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_16 = ((Value_Constructor*)var_1)->args[0];
@@ -3119,21 +3119,21 @@ Value *Main_update
           }
         }
         free(constructorField_119);
-        Value * var_20 = tmp_120;                            // Main:31:12--31:18
-        // start Network_Socket_listen(var_19, var_20)       // Main:31:12--31:18
+        Value * var_20 = tmp_120;                            // Main:30:12--30:18
+        // start Network_Socket_listen(var_19, var_20)       // Main:30:12--30:18
         Value_Arglist *arglist_121 = newArglist(0,2);
         arglist_121->args[0] =  newReference(var_19);
         arglist_121->args[1] =  newReference(var_20);
         Value *(*fPtr_122)(Value_Arglist*) = Network_Socket_listen_arglist;
-                                                             // Main:31:12--31:18
+                                                             // Main:30:12--30:18
         Value *closure_122 = (Value*)makeClosureFromArglist(fPtr_122, arglist_121);
-                                                             // Main:31:12--31:18
-        // end   Network_Socket_listen(var_19, var_20)       // Main:31:12--31:18
+                                                             // Main:30:12--30:18
+        // end   Network_Socket_listen(var_19, var_20)       // Main:30:12--30:18
         Value * var_21 = trampoline(closure_122);            // Prelude.IO:31:13--31:20
         Value_Arglist *arglist_123 = newArglist(1,2);
         arglist_123->args[0] =  newReference(var_1);
         Value *(*closure_124)(Value_Arglist*) = Main_update_3_arglist;
-                                                             // Main:31:5--31:8
+                                                             // Main:30:5--30:8
         Value * var_22 = (Value*)makeClosureFromArglist(closure_124, arglist_123);
                                                              // Prelude.IO:31:13--31:20
         // start PrimIO_io_bind(var_21, var_22)              // Prelude.IO:31:13--31:20
@@ -3159,14 +3159,14 @@ Value *Main_update
         Value *(*fPtr_128)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_128 = (Value*)makeClosureFromArglist(fPtr_128, arglist_127);
         // end   csegen_13()
-        Value * var_26 = trampoline(closure_128);            // Main:40:12--40:18
-        Value * tmp_130 = NULL;                              // Main:16:1--20:24
+        Value * var_26 = trampoline(closure_128);            // Main:39:12--39:18
+        Value * tmp_130 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_129= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_129[0].tag = 0;
         constructorField_129[0].name = NULL;
         switch(compareConstructors(var_1, constructorField_129, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_23 = ((Value_Constructor*)var_1)->args[0];
@@ -3177,21 +3177,21 @@ Value *Main_update
           }
         }
         free(constructorField_129);
-        Value * var_27 = tmp_130;                            // Main:40:12--40:18
-        // start Network_Socket_accept(var_26, var_27)       // Main:40:12--40:18
+        Value * var_27 = tmp_130;                            // Main:39:12--39:18
+        // start Network_Socket_accept(var_26, var_27)       // Main:39:12--39:18
         Value_Arglist *arglist_131 = newArglist(0,2);
         arglist_131->args[0] =  newReference(var_26);
         arglist_131->args[1] =  newReference(var_27);
         Value *(*fPtr_132)(Value_Arglist*) = Network_Socket_accept_arglist;
-                                                             // Main:40:12--40:18
+                                                             // Main:39:12--39:18
         Value *closure_132 = (Value*)makeClosureFromArglist(fPtr_132, arglist_131);
-                                                             // Main:40:12--40:18
-        // end   Network_Socket_accept(var_26, var_27)       // Main:40:12--40:18
+                                                             // Main:39:12--39:18
+        // end   Network_Socket_accept(var_26, var_27)       // Main:39:12--39:18
         Value * var_28 = trampoline(closure_132);            // Prelude.IO:31:13--31:20
         Value_Arglist *arglist_133 = newArglist(1,2);
         arglist_133->args[0] =  newReference(var_1);
         Value *(*closure_134)(Value_Arglist*) = Main_update_5_arglist;
-                                                             // Main:40:5--40:8
+                                                             // Main:39:5--39:8
         Value * var_29 = (Value*)makeClosureFromArglist(closure_134, arglist_133);
                                                              // Prelude.IO:31:13--31:20
         // start PrimIO_io_bind(var_28, var_29)              // Prelude.IO:31:13--31:20
@@ -3212,13 +3212,13 @@ Value *Main_update
       }
       case 3 :
       {
-        Value * tmp_138 = NULL;                              // Main:16:1--20:24
+        Value * tmp_138 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_137= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_137[0].tag = 0;
         constructorField_137[0].name = NULL;
         switch(compareConstructors(var_1, constructorField_137, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_30 = ((Value_Constructor*)var_1)->args[0];
@@ -3229,31 +3229,31 @@ Value *Main_update
           }
         }
         free(constructorField_137);
-        Value * var_33 = tmp_138;                            // Main:45:5--51:25
+        Value * var_33 = tmp_138;                            // Main:44:5--50:25
         // start Main_case___quotationupdate_quotation_8634(var_1, var_33)
-                                                             // Main:45:5--51:25
+                                                             // Main:44:5--50:25
         Value_Arglist *arglist_139 = newArglist(0,2);
         arglist_139->args[0] =  newReference(var_1);
         arglist_139->args[1] =  newReference(var_33);
         Value *(*fPtr_140)(Value_Arglist*) = Main_case___quotationupdate_quotation_8634_arglist;
-                                                             // Main:45:5--51:25
+                                                             // Main:44:5--50:25
         Value *closure_140 = (Value*)makeClosureFromArglist(fPtr_140, arglist_139);
-                                                             // Main:45:5--51:25
+                                                             // Main:44:5--50:25
         // end   Main_case___quotationupdate_quotation_8634(var_1, var_33)
-                                                             // Main:45:5--51:25
+                                                             // Main:44:5--50:25
         tmp_102 = closure_140;
         removeReference(var_33);
         break;
       }
       case 4 :
       {
-        Value * tmp_142 = NULL;                              // Main:16:1--20:24
+        Value * tmp_142 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_141= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_141[0].tag = 0;
         constructorField_141[0].name = NULL;
         switch(compareConstructors(var_1, constructorField_141, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_34 = ((Value_Constructor*)var_1)->args[0];
@@ -3264,18 +3264,18 @@ Value *Main_update
           }
         }
         free(constructorField_141);
-        Value * var_37 = tmp_142;                            // Main:54:5--61:10
+        Value * var_37 = tmp_142;                            // Main:53:5--60:10
         // start Main_case___quotationupdate_quotation_8698(var_1, var_37)
-                                                             // Main:54:5--61:10
+                                                             // Main:53:5--60:10
         Value_Arglist *arglist_143 = newArglist(0,2);
         arglist_143->args[0] =  newReference(var_1);
         arglist_143->args[1] =  newReference(var_37);
         Value *(*fPtr_144)(Value_Arglist*) = Main_case___quotationupdate_quotation_8698_arglist;
-                                                             // Main:54:5--61:10
+                                                             // Main:53:5--60:10
         Value *closure_144 = (Value*)makeClosureFromArglist(fPtr_144, arglist_143);
-                                                             // Main:54:5--61:10
+                                                             // Main:53:5--60:10
         // end   Main_case___quotationupdate_quotation_8698(var_1, var_37)
-                                                             // Main:54:5--61:10
+                                                             // Main:53:5--60:10
         tmp_102 = closure_144;
         removeReference(var_37);
         break;
@@ -3308,16 +3308,16 @@ Value *Main_update_5
     arglist_145->args[0] =  newReference(var_0);
     Value *(*closure_146)(Value_Arglist*) = Main_update_4_arglist;
     Value * var_2 = (Value*)makeClosureFromArglist(closure_146, arglist_145);
-                                                             // Main:41:5--41:15
-    // start Main_mapRightIO(var_1, var_2)                   // Main:41:5--41:15
+                                                             // Main:40:5--40:15
+    // start Main_mapRightIO(var_1, var_2)                   // Main:40:5--40:15
     Value_Arglist *arglist_147 = newArglist(0,2);
     arglist_147->args[0] =  newReference(var_1);
     arglist_147->args[1] =  newReference(var_2);
     Value *(*fPtr_148)(Value_Arglist*) = Main_mapRightIO_arglist;
-                                                             // Main:41:5--41:15
+                                                             // Main:40:5--40:15
     Value *closure_148 = (Value*)makeClosureFromArglist(fPtr_148, arglist_147);
-                                                             // Main:41:5--41:15
-    // end   Main_mapRightIO(var_1, var_2)                   // Main:41:5--41:15
+                                                             // Main:40:5--40:15
+    // end   Main_mapRightIO(var_1, var_2)                   // Main:40:5--40:15
     Value *returnValue = closure_148;
     removeReference(var_2);
     return returnValue;
@@ -3351,14 +3351,14 @@ Value *Main_update_4
       {
         Value * var_2 = ((Value_Constructor*)var_1)->args[0];
         Value * var_3 = ((Value_Constructor*)var_1)->args[1];
-        Value * var_13 = (Value*)makeBits8(UINT8_C(3));      // Main:42:9--42:15
-        Value * tmp_152 = NULL;                              // Main:16:1--20:24
+        Value * var_13 = (Value*)makeBits8(UINT8_C(3));      // Main:41:9--41:15
+        Value * tmp_152 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_151= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_151[0].tag = 0;
         constructorField_151[0].name = NULL;
         switch(compareConstructors(var_0, constructorField_151, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_4 = ((Value_Constructor*)var_0)->args[0];
@@ -3369,14 +3369,14 @@ Value *Main_update_4
           }
         }
         free(constructorField_151);
-        Value * var_10 = tmp_152;                            // Main:42:22--42:35
-        Value * tmp_154 = NULL;                              // Main:16:1--20:24
+        Value * var_10 = tmp_152;                            // Main:41:22--41:35
+        Value * tmp_154 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_153= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_153[0].tag = 0;
         constructorField_153[0].name = NULL;
         switch(compareConstructors(var_0, constructorField_153, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_7 = ((Value_Constructor*)var_0)->args[0];
@@ -3387,28 +3387,28 @@ Value *Main_update_4
           }
         }
         free(constructorField_153);
-        Value * var_11 = tmp_154;                            // Main:42:22--42:35
+        Value * var_11 = tmp_154;                            // Main:41:22--41:35
         Value_Constructor* constructor_155 = newConstructor(1, 1, "Prelude_Types_Just");
-                                                             // Main:42:55--42:59
-         // constructor Prelude_Types_Just                   // Main:42:55--42:59
+                                                             // Main:41:55--41:59
+         // constructor Prelude_Types_Just                   // Main:41:55--41:59
         constructor_155->args[0] = newReference(var_2);
-        Value * var_12 = (Value*)constructor_155;            // Main:42:22--42:35
+        Value * var_12 = (Value*)constructor_155;            // Main:41:22--41:35
         Value_Constructor* constructor_156 = newConstructor(3, 0, "Main_MkServerState");
-                                                             // Main:42:22--42:35
-         // constructor Main_MkServerState                   // Main:42:22--42:35
+                                                             // Main:41:22--41:35
+         // constructor Main_MkServerState                   // Main:41:22--41:35
         constructor_156->args[0] = newReference(var_10);
         constructor_156->args[1] = newReference(var_11);
         constructor_156->args[2] = newReference(var_12);
-        Value * var_14 = (Value*)constructor_156;            // Main:42:9--42:15
-        // start Main_update(var_13, var_14)                 // Main:42:9--42:15
+        Value * var_14 = (Value*)constructor_156;            // Main:41:9--41:15
+        // start Main_update(var_13, var_14)                 // Main:41:9--41:15
         Value_Arglist *arglist_157 = newArglist(0,2);
         arglist_157->args[0] =  newReference(var_13);
         arglist_157->args[1] =  newReference(var_14);
         Value *(*fPtr_158)(Value_Arglist*) = Main_update_arglist;
-                                                             // Main:42:9--42:15
+                                                             // Main:41:9--41:15
         Value *closure_158 = (Value*)makeClosureFromArglist(fPtr_158, arglist_157);
-                                                             // Main:42:9--42:15
-        // end   Main_update(var_13, var_14)                 // Main:42:9--42:15
+                                                             // Main:41:9--41:15
+        // end   Main_update(var_13, var_14)                 // Main:41:9--41:15
         tmp_150 = closure_158;
         removeReference(var_14);
         removeReference(var_12);
@@ -3461,7 +3461,7 @@ Value *Main_update_3
         Value *(*fPtr_163)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_163 = (Value*)makeClosureFromArglist(fPtr_163, arglist_162);
         // end   csegen_13()
-        Value * var_6 = trampoline(closure_163);             // Main:33:14--33:22
+        Value * var_6 = trampoline(closure_163);             // Main:32:14--32:22
         Value * var_4 = (Value*)makeString("Failed to listen on socket with error: ");
         // start Prelude_Show_show_Show_Int(var_1)
         Value_Arglist *arglist_164 = newArglist(0,1);
@@ -3470,16 +3470,16 @@ Value *Main_update_3
         Value *closure_165 = (Value*)makeClosureFromArglist(fPtr_165, arglist_164);
         // end   Prelude_Show_show_Show_Int(var_1)
         Value * var_5 = trampoline(closure_165);
-        Value * var_7 = strAppend(var_4, var_5);             // Main:33:14--33:22
-        // start Prelude_IO_putStrLn(var_6, var_7)           // Main:33:14--33:22
+        Value * var_7 = strAppend(var_4, var_5);             // Main:32:14--32:22
+        // start Prelude_IO_putStrLn(var_6, var_7)           // Main:32:14--32:22
         Value_Arglist *arglist_166 = newArglist(0,2);
         arglist_166->args[0] =  newReference(var_6);
         arglist_166->args[1] =  newReference(var_7);
         Value *(*fPtr_167)(Value_Arglist*) = Prelude_IO_putStrLn_arglist;
-                                                             // Main:33:14--33:22
+                                                             // Main:32:14--32:22
         Value *closure_167 = (Value*)makeClosureFromArglist(fPtr_167, arglist_166);
-                                                             // Main:33:14--33:22
-        // end   Prelude_IO_putStrLn(var_6, var_7)           // Main:33:14--33:22
+                                                             // Main:32:14--32:22
+        // end   Prelude_IO_putStrLn(var_6, var_7)           // Main:32:14--32:22
         tmp_161 = closure_167;
         removeReference(var_7);
         removeReference(var_5);
@@ -3494,21 +3494,21 @@ Value *Main_update_3
         Value *(*fPtr_169)(Value_Arglist*) = csegen_12_arglist;
         Value *closure_169 = (Value*)makeClosureFromArglist(fPtr_169, arglist_168);
         // end   csegen_12()
-        Value * var_16 = trampoline(closure_169);            // Main:35:13--35:64
+        Value * var_16 = trampoline(closure_169);            // Main:34:13--34:64
         // start csegen_13()
         Value_Arglist *arglist_170 = newArglist(0,0);
         Value *(*fPtr_171)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_171 = (Value*)makeClosureFromArglist(fPtr_171, arglist_170);
         // end   csegen_13()
-        Value * var_14 = trampoline(closure_171);            // Main:35:13--35:21
+        Value * var_14 = trampoline(closure_171);            // Main:34:13--34:21
         Value * var_12 = (Value*)makeString("server running on: ");
-        Value * tmp_173 = NULL;                              // Main:16:1--20:24
+        Value * tmp_173 = NULL;                              // Main:15:1--19:24
         AConAlt * constructorField_172= newConstructorField(1);
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
         constructorField_172[0].tag = 0;
         constructorField_172[0].name = NULL;
         switch(compareConstructors(var_0, constructorField_172, 1)){
-                                                             // Main:16:1--20:24
+                                                             // Main:15:1--19:24
           case 0:
           {
             Value * var_8 = ((Value_Constructor*)var_0)->args[0];
@@ -3527,35 +3527,35 @@ Value *Main_update_3
         Value *closure_175 = (Value*)makeClosureFromArglist(fPtr_175, arglist_174);
         // end   Prelude_Show_show_Show_Int(var_11)
         Value * var_13 = trampoline(closure_175);
-        Value * var_15 = strAppend(var_12, var_13);          // Main:35:13--35:21
-        // start Prelude_IO_putStrLn(var_14, var_15)         // Main:35:13--35:21
+        Value * var_15 = strAppend(var_12, var_13);          // Main:34:13--34:21
+        // start Prelude_IO_putStrLn(var_14, var_15)         // Main:34:13--34:21
         Value_Arglist *arglist_176 = newArglist(0,2);
         arglist_176->args[0] =  newReference(var_14);
         arglist_176->args[1] =  newReference(var_15);
         Value *(*fPtr_177)(Value_Arglist*) = Prelude_IO_putStrLn_arglist;
-                                                             // Main:35:13--35:21
+                                                             // Main:34:13--34:21
         Value *closure_177 = (Value*)makeClosureFromArglist(fPtr_177, arglist_176);
-                                                             // Main:35:13--35:21
-        // end   Prelude_IO_putStrLn(var_14, var_15)         // Main:35:13--35:21
-        Value * var_17 = trampoline(closure_177);            // Main:35:13--35:64
+                                                             // Main:34:13--34:21
+        // end   Prelude_IO_putStrLn(var_14, var_15)         // Main:34:13--34:21
+        Value * var_17 = trampoline(closure_177);            // Main:34:13--34:64
         Value_Arglist *arglist_178 = newArglist(1,2);
         arglist_178->args[0] =  newReference(var_0);
         Value *(*closure_179)(Value_Arglist*) = Main_update_2_arglist;
-                                                             // Main:36:13--36:30
+                                                             // Main:35:13--35:30
         Value * var_18 = (Value*)makeClosureFromArglist(closure_179, arglist_178);
-                                                             // Main:35:13--35:64
+                                                             // Main:34:13--34:64
         // start Prelude_Interfaces__gt_gt(var_16, var_17, var_18)
-                                                             // Main:35:13--35:64
+                                                             // Main:34:13--34:64
         Value_Arglist *arglist_180 = newArglist(0,3);
         arglist_180->args[0] =  newReference(var_16);
         arglist_180->args[1] =  newReference(var_17);
         arglist_180->args[2] =  newReference(var_18);
         Value *(*fPtr_181)(Value_Arglist*) = Prelude_Interfaces__gt_gt_arglist;
-                                                             // Main:35:13--35:64
+                                                             // Main:34:13--34:64
         Value *closure_181 = (Value*)makeClosureFromArglist(fPtr_181, arglist_180);
-                                                             // Main:35:13--35:64
+                                                             // Main:34:13--34:64
         // end   Prelude_Interfaces__gt_gt(var_16, var_17, var_18)
-                                                             // Main:35:13--35:64
+                                                             // Main:34:13--34:64
         tmp_161 = closure_181;
         removeReference(var_18);
         removeReference(var_17);
@@ -3599,33 +3599,33 @@ Value *Main_update_2
     Value *(*fPtr_183)(Value_Arglist*) = csegen_12_arglist;
     Value *closure_183 = (Value*)makeClosureFromArglist(fPtr_183, arglist_182);
     // end   csegen_12()
-    Value * var_3 = trampoline(closure_183);                 // Main:36:13--36:30
-    Value * var_2 = (Value*)makeBits8(UINT8_C(2));           // Main:36:13--36:19
-    // start Main_update(var_2, var_0)                       // Main:36:13--36:19
+    Value * var_3 = trampoline(closure_183);                 // Main:35:13--35:30
+    Value * var_2 = (Value*)makeBits8(UINT8_C(2));           // Main:35:13--35:19
+    // start Main_update(var_2, var_0)                       // Main:35:13--35:19
     Value_Arglist *arglist_184 = newArglist(0,2);
     arglist_184->args[0] =  newReference(var_2);
     arglist_184->args[1] =  newReference(var_0);
     Value *(*fPtr_185)(Value_Arglist*) = Main_update_arglist;
-                                                             // Main:36:13--36:19
+                                                             // Main:35:13--35:19
     Value *closure_185 = (Value*)makeClosureFromArglist(fPtr_185, arglist_184);
-                                                             // Main:36:13--36:19
-    // end   Main_update(var_2, var_0)                       // Main:36:13--36:19
-    Value * var_4 = trampoline(closure_185);                 // Main:36:13--36:30
+                                                             // Main:35:13--35:19
+    // end   Main_update(var_2, var_0)                       // Main:35:13--35:19
+    Value * var_4 = trampoline(closure_185);                 // Main:35:13--35:30
     Value_Arglist *arglist_186 = newArglist(1,1);
     Value *(*closure_187)(Value_Arglist*) = Main_update_1_arglist;
-                                                             // Main:37:13--37:42
+                                                             // Main:36:13--36:42
     Value * var_5 = (Value*)makeClosureFromArglist(closure_187, arglist_186);
-                                                             // Main:36:13--36:30
-    // start Prelude_Interfaces__gt_gt(var_3, var_4, var_5)  // Main:36:13--36:30
+                                                             // Main:35:13--35:30
+    // start Prelude_Interfaces__gt_gt(var_3, var_4, var_5)  // Main:35:13--35:30
     Value_Arglist *arglist_188 = newArglist(0,3);
     arglist_188->args[0] =  newReference(var_3);
     arglist_188->args[1] =  newReference(var_4);
     arglist_188->args[2] =  newReference(var_5);
     Value *(*fPtr_189)(Value_Arglist*) = Prelude_Interfaces__gt_gt_arglist;
-                                                             // Main:36:13--36:30
+                                                             // Main:35:13--35:30
     Value *closure_189 = (Value*)makeClosureFromArglist(fPtr_189, arglist_188);
-                                                             // Main:36:13--36:30
-    // end   Prelude_Interfaces__gt_gt(var_3, var_4, var_5)  // Main:36:13--36:30
+                                                             // Main:35:13--35:30
+    // end   Prelude_Interfaces__gt_gt(var_3, var_4, var_5)  // Main:35:13--35:30
     Value *returnValue = closure_189;
     removeReference(var_5);
     removeReference(var_4);
@@ -3657,17 +3657,17 @@ Value *Main_update_1
     Value *(*fPtr_191)(Value_Arglist*) = csegen_13_arglist;
     Value *closure_191 = (Value*)makeClosureFromArglist(fPtr_191, arglist_190);
     // end   csegen_13()
-    Value * var_1 = trampoline(closure_191);                 // Main:37:13--37:21
-    Value * var_2 = (Value*)makeString("killing process ");  // Main:37:13--37:21
-    // start Prelude_IO_putStrLn(var_1, var_2)               // Main:37:13--37:21
+    Value * var_1 = trampoline(closure_191);                 // Main:36:13--36:21
+    Value * var_2 = (Value*)makeString("killing process ");  // Main:36:13--36:21
+    // start Prelude_IO_putStrLn(var_1, var_2)               // Main:36:13--36:21
     Value_Arglist *arglist_192 = newArglist(0,2);
     arglist_192->args[0] =  newReference(var_1);
     arglist_192->args[1] =  newReference(var_2);
     Value *(*fPtr_193)(Value_Arglist*) = Prelude_IO_putStrLn_arglist;
-                                                             // Main:37:13--37:21
+                                                             // Main:36:13--36:21
     Value *closure_193 = (Value*)makeClosureFromArglist(fPtr_193, arglist_192);
-                                                             // Main:37:13--37:21
-    // end   Prelude_IO_putStrLn(var_1, var_2)               // Main:37:13--37:21
+                                                             // Main:36:13--36:21
+    // end   Prelude_IO_putStrLn(var_1, var_2)               // Main:36:13--36:21
     Value *returnValue = closure_193;
     removeReference(var_2);
     removeReference(var_1);
@@ -3711,7 +3711,7 @@ Value *Main_update_0
         Value *(*fPtr_198)(Value_Arglist*) = csegen_13_arglist;
         Value *closure_198 = (Value*)makeClosureFromArglist(fPtr_198, arglist_197);
         // end   csegen_13()
-        Value * var_6 = trampoline(closure_198);             // Main:27:14--27:22
+        Value * var_6 = trampoline(closure_198);             // Main:26:14--26:22
         Value * var_4 = (Value*)makeString("Failed to bind socket with error: ");
         // start Prelude_Show_show_Show_Int(var_1)
         Value_Arglist *arglist_199 = newArglist(0,1);
@@ -3720,16 +3720,16 @@ Value *Main_update_0
         Value *closure_200 = (Value*)makeClosureFromArglist(fPtr_200, arglist_199);
         // end   Prelude_Show_show_Show_Int(var_1)
         Value * var_5 = trampoline(closure_200);
-        Value * var_7 = strAppend(var_4, var_5);             // Main:27:14--27:22
-        // start Prelude_IO_putStrLn(var_6, var_7)           // Main:27:14--27:22
+        Value * var_7 = strAppend(var_4, var_5);             // Main:26:14--26:22
+        // start Prelude_IO_putStrLn(var_6, var_7)           // Main:26:14--26:22
         Value_Arglist *arglist_201 = newArglist(0,2);
         arglist_201->args[0] =  newReference(var_6);
         arglist_201->args[1] =  newReference(var_7);
         Value *(*fPtr_202)(Value_Arglist*) = Prelude_IO_putStrLn_arglist;
-                                                             // Main:27:14--27:22
+                                                             // Main:26:14--26:22
         Value *closure_202 = (Value*)makeClosureFromArglist(fPtr_202, arglist_201);
-                                                             // Main:27:14--27:22
-        // end   Prelude_IO_putStrLn(var_6, var_7)           // Main:27:14--27:22
+                                                             // Main:26:14--26:22
+        // end   Prelude_IO_putStrLn(var_6, var_7)           // Main:26:14--26:22
         tmp_196 = closure_202;
         removeReference(var_7);
         removeReference(var_5);
@@ -3739,16 +3739,16 @@ Value *Main_update_0
       }
       case 0 :
       {
-        Value * var_8 = (Value*)makeBits8(UINT8_C(1));       // Main:28:17--28:23
-        // start Main_update(var_8, var_0)                   // Main:28:17--28:23
+        Value * var_8 = (Value*)makeBits8(UINT8_C(1));       // Main:27:17--27:23
+        // start Main_update(var_8, var_0)                   // Main:27:17--27:23
         Value_Arglist *arglist_203 = newArglist(0,2);
         arglist_203->args[0] =  newReference(var_8);
         arglist_203->args[1] =  newReference(var_0);
         Value *(*fPtr_204)(Value_Arglist*) = Main_update_arglist;
-                                                             // Main:28:17--28:23
+                                                             // Main:27:17--27:23
         Value *closure_204 = (Value*)makeClosureFromArglist(fPtr_204, arglist_203);
-                                                             // Main:28:17--28:23
-        // end   Main_update(var_8, var_0)                   // Main:28:17--28:23
+                                                             // Main:27:17--27:23
+        // end   Main_update(var_8, var_0)                   // Main:27:17--27:23
         tmp_196 = closure_204;
         removeReference(var_8);
         break;
@@ -3784,28 +3784,28 @@ Value *Main_startServer
     Value *(*fPtr_206)(Value_Arglist*) = csegen_13_arglist;
     Value *closure_206 = (Value*)makeClosureFromArglist(fPtr_206, arglist_205);
     // end   csegen_13()
-    Value * var_1 = trampoline(closure_206);                 // Main:66:14--66:20
-    Value * var_2 = (Value*)makeBits8(UINT8_C(2));           // Main:66:14--66:20
-    Value * var_3 = (Value*)makeBits8(UINT8_C(1));           // Main:66:14--66:20
-    Value * var_4 = (Value*)makeInt64(INT64_C(0));           // Main:66:14--66:20
+    Value * var_1 = trampoline(closure_206);                 // Main:65:14--65:20
+    Value * var_2 = (Value*)makeBits8(UINT8_C(2));           // Main:65:14--65:20
+    Value * var_3 = (Value*)makeBits8(UINT8_C(1));           // Main:65:14--65:20
+    Value * var_4 = (Value*)makeInt64(INT64_C(0));           // Main:65:14--65:20
     // start Network_Socket_socket(var_1, var_2, var_3, var_4)
-                                                             // Main:66:14--66:20
+                                                             // Main:65:14--65:20
     Value_Arglist *arglist_207 = newArglist(0,4);
     arglist_207->args[0] =  newReference(var_1);
     arglist_207->args[1] =  newReference(var_2);
     arglist_207->args[2] =  newReference(var_3);
     arglist_207->args[3] =  newReference(var_4);
     Value *(*fPtr_208)(Value_Arglist*) = Network_Socket_socket_arglist;
-                                                             // Main:66:14--66:20
+                                                             // Main:65:14--65:20
     Value *closure_208 = (Value*)makeClosureFromArglist(fPtr_208, arglist_207);
-                                                             // Main:66:14--66:20
+                                                             // Main:65:14--65:20
     // end   Network_Socket_socket(var_1, var_2, var_3, var_4)
-                                                             // Main:66:14--66:20
+                                                             // Main:65:14--65:20
     Value * var_5 = trampoline(closure_208);                 // Prelude.IO:31:13--31:20
     Value_Arglist *arglist_209 = newArglist(1,2);
     arglist_209->args[0] =  newReference(var_0);
     Value *(*closure_210)(Value_Arglist*) = Main_startServer_1_arglist;
-                                                             // Main:66:5--66:10
+                                                             // Main:65:5--65:10
     Value * var_6 = (Value*)makeClosureFromArglist(closure_210, arglist_209);
                                                              // Prelude.IO:31:13--31:20
     // start PrimIO_io_bind(var_5, var_6)                    // Prelude.IO:31:13--31:20
@@ -3864,27 +3864,27 @@ Value *Main_startServer_1
       case 1:
       {
         Value * var_3 = ((Value_Constructor*)var_1)->args[0];
-        Value * var_5 = (Value*)makeBits8(UINT8_C(0));       // Main:71:5--71:11
+        Value * var_5 = (Value*)makeBits8(UINT8_C(0));       // Main:70:5--70:11
         Value_Constructor* constructor_217 = newConstructor(0, 0, "Prelude_Types_Nothing");
-                                                             // Main:71:39--71:46
-         // constructor Prelude_Types_Nothing                // Main:71:39--71:46
-        Value * var_4 = (Value*)constructor_217;             // Main:71:18--71:31
+                                                             // Main:70:39--70:46
+         // constructor Prelude_Types_Nothing                // Main:70:39--70:46
+        Value * var_4 = (Value*)constructor_217;             // Main:70:18--70:31
         Value_Constructor* constructor_218 = newConstructor(3, 0, "Main_MkServerState");
-                                                             // Main:71:18--71:31
-         // constructor Main_MkServerState                   // Main:71:18--71:31
+                                                             // Main:70:18--70:31
+         // constructor Main_MkServerState                   // Main:70:18--70:31
         constructor_218->args[0] = newReference(var_0);
         constructor_218->args[1] = newReference(var_3);
         constructor_218->args[2] = newReference(var_4);
-        Value * var_6 = (Value*)constructor_218;             // Main:71:5--71:11
-        // start Main_update(var_5, var_6)                   // Main:71:5--71:11
+        Value * var_6 = (Value*)constructor_218;             // Main:70:5--70:11
+        // start Main_update(var_5, var_6)                   // Main:70:5--70:11
         Value_Arglist *arglist_219 = newArglist(0,2);
         arglist_219->args[0] =  newReference(var_5);
         arglist_219->args[1] =  newReference(var_6);
         Value *(*fPtr_220)(Value_Arglist*) = Main_update_arglist;
-                                                             // Main:71:5--71:11
+                                                             // Main:70:5--70:11
         Value *closure_220 = (Value*)makeClosureFromArglist(fPtr_220, arglist_219);
-                                                             // Main:71:5--71:11
-        // end   Main_update(var_5, var_6)                   // Main:71:5--71:11
+                                                             // Main:70:5--70:11
+        // end   Main_update(var_5, var_6)                   // Main:70:5--70:11
         tmp_214 = closure_220;
         removeReference(var_6);
         removeReference(var_4);
@@ -3937,14 +3937,14 @@ Value *Main_mapRightIO
 ,   Value * var_1
 )
 {
-    Value * tmp_222 = NULL;                                  // Main:8:15--8:25
-    AConAlt * constructorField_221= newConstructorField(2);  // Main:8:15--8:25
+    Value * tmp_222 = NULL;                                  // Main:7:15--7:25
+    AConAlt * constructorField_221= newConstructorField(2);  // Main:7:15--7:25
     constructorField_221[0].tag = 0;
     constructorField_221[0].name = NULL;
     constructorField_221[1].tag = 1;
     constructorField_221[1].name = NULL;
     switch(compareConstructors(var_0, constructorField_221, 2)){
-                                                             // Main:8:15--8:25
+                                                             // Main:7:15--7:25
       case 0:
       {
         Value * var_2 = ((Value_Constructor*)var_0)->args[0];
@@ -4003,15 +4003,15 @@ Value *Main_mapRightIO_0_arglist(Value_Arglist* arglist)
 Value *Main_main(void)
 {
     Value * var_0 = (Value*)makeIntegerLiteral("5000");
-    Value * var_1 = cast_Integer_to_Int64(var_0);            // Main:76:5--76:16
-    // start Main_startServer(var_1)                         // Main:76:5--76:16
+    Value * var_1 = cast_Integer_to_Int64(var_0);            // Main:75:5--75:16
+    // start Main_startServer(var_1)                         // Main:75:5--75:16
     Value_Arglist *arglist_225 = newArglist(0,1);
     arglist_225->args[0] =  newReference(var_1);
     Value *(*fPtr_226)(Value_Arglist*) = Main_startServer_arglist;
-                                                             // Main:76:5--76:16
+                                                             // Main:75:5--75:16
     Value *closure_226 = (Value*)makeClosureFromArglist(fPtr_226, arglist_225);
-                                                             // Main:76:5--76:16
-    // end   Main_startServer(var_1)                         // Main:76:5--76:16
+                                                             // Main:75:5--75:16
+    // end   Main_startServer(var_1)                         // Main:75:5--75:16
     Value *returnValue = closure_226;
     removeReference(var_1);
     removeReference(var_0);
